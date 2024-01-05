@@ -185,15 +185,15 @@ const HomePage = () => {
                     </List>
                 )}
                 <List>
-                    <ListItem button component="a" href="#" style={{ borderBottom: "1px solid black", }}>
+                    <ListItem button component="a" href="#" sx={{ borderBottom: "1px solid black", '&:hover': { backgroundColor: 'red' } }}>
                         {/* Add Typography component with fontSize */}
                         <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Admission</Typography>} />
                     </ListItem>
                     <div style={{ display: "flex", flexDirection: "row", borderBottom: "1px solid black" }}>
-                        <ListItem button component="a" href="#" onClick={handleAcademicsToggle}>
+                        <ListItem button component="a" href="#" onClick={handleAcademicsToggle} sx={{ '&:hover': { backgroundColor: 'red' }}}>
                             <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Academics</Typography>} />
                         </ListItem>
-                        <Box style={{ borderLeft: "1px solid black" }}>
+                        <Box sx={{ borderLeft: "1px solid black", '&:hover': { backgroundColor: '#edc054' } }}>
                             <IconButton edge="end" color="inherit" aria-label="dropdown" onClick={handleAcademicsToggle} style={{ margin: "20px" }}>
                                 {!isAcademicsOpen ? <ExpandMoreIcon /> : <KeyboardArrowUpIcon />}
                             </IconButton>
@@ -212,10 +212,10 @@ const HomePage = () => {
                     </Collapse>
                     {/* News */}
                     <div style={{ display: "flex", flexDirection: "row", borderBottom: "1px solid black" }}>
-                        <ListItem button component="a" href="#" onClick={handleNewsToggle}>
+                        <ListItem button component="a" href="#" onClick={handleNewsToggle} sx={{ '&:hover': { backgroundColor: 'red' }}}>
                             <ListItemText primary={<Typography fontSize={35} fontWeight="bold">News</Typography>} />
                         </ListItem>
-                        <Box style={{ borderLeft: "1px solid black" }}>
+                        <Box sx={{ borderLeft: "1px solid black", '&:hover': { backgroundColor: '#edc054' } }}>
                             <IconButton edge="end" color="inherit" aria-label="dropdown" onClick={handleNewsToggle} style={{ margin: "20px" }}>
                                 {!isNewsOpen ? <ExpandMoreIcon /> : <KeyboardArrowUpIcon />}
                             </IconButton>
@@ -234,10 +234,10 @@ const HomePage = () => {
                     </Collapse>
                     {/*Calenders  */}
                     <div style={{ display: "flex", flexDirection: "row", borderBottom: "1px solid black" }}>
-                        <ListItem button component="a" href="#" onClick={handleCalendarsToggle}>
+                        <ListItem button component="a" href="#" onClick={handleCalendarsToggle} sx={{ '&:hover': { backgroundColor: 'red' }}}>
                             <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Calendars</Typography>} />
                         </ListItem>
-                        <Box style={{ borderLeft: "1px solid black" }}>
+                        <Box sx={{ borderLeft: "1px solid black", '&:hover': { backgroundColor: '#edc054' } }}>
                             <IconButton edge="end" color="inherit" aria-label="dropdown" onClick={handleCalendarsToggle} style={{ margin: "20px" }}>
                                 {!isCalendarsOpen ? <ExpandMoreIcon /> : <KeyboardArrowUpIcon />}
                             </IconButton>
@@ -256,10 +256,10 @@ const HomePage = () => {
                     </Collapse>
                     {/* About */}
                     <div style={{ display: "flex", flexDirection: "row", borderBottom: "1px solid black" }}>
-                        <ListItem button component="a" href="#" onClick={handleAboutToggle}>
+                        <ListItem button component="a" href="#" onClick={handleAboutToggle} sx={{ '&:hover': { backgroundColor: 'red' }}}>
                             <ListItemText primary={<Typography fontSize={35} fontWeight="bold">About</Typography>} />
                         </ListItem>
-                        <Box style={{ borderLeft: "1px solid black" }}>
+                        <Box sx={{ borderLeft: "1px solid black", '&:hover': { backgroundColor: '#edc054' } }}>
                             <IconButton edge="end" color="inherit" aria-label="dropdown" onClick={handleAboutToggle} style={{ margin: "20px" }}>
                                 {!isAboutOpen ? <ExpandMoreIcon /> : <KeyboardArrowUpIcon />}
                             </IconButton>
@@ -277,7 +277,7 @@ const HomePage = () => {
                         </List>
                     </Collapse>
                     {/* Contact */}
-                    <ListItem button component="a" href="#" style={{ borderBottom: "1px solid black" }}>
+                    <ListItem button component="a" href="#" sx={{ borderBottom: "1px solid black", '&:hover': { backgroundColor: 'red' } }}>
                         {/* Add Typography component with fontSize */}
                         <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Contacts</Typography>} />
                     </ListItem>

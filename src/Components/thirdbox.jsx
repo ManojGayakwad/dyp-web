@@ -1,15 +1,20 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, createTheme, ThemeProvider } from '@mui/material';
 
 const ThirdBox = () => {
+    const theme = createTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const adjustedFontSize = isSmallScreen ? 20 : 40; 
+    const adjustedWidth = isSmallScreen ? 100 : 110;
+    const adjustedMargin = isSmallScreen ? 0 : -60; 
     return (
         <Box
             sx={{
                 boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Box shadow
-                maxWidth: '1200px', // Maximum width of the box
+                minWidth: `${adjustedWidth}%`, // Maximum width of the box
                 minHeight: '60vh',
-                margin: 'auto', // Center the box
-                padding: '10px', // Padding inside the box
+                marginLeft: `${adjustedMargin}px`, // Center the box
+                // padding: '10px', // Padding inside the box
                 textAlign: 'center', // Center text
                 marginTop: '20px', // Add some top margin
                 background: "#edc054",
@@ -19,7 +24,7 @@ const ThirdBox = () => {
             }}
         >
             {/* Profile Card 1 */}
-            <div style={{ display: "flex", flexDirection: "row", gap:'20px'}}>
+            <div style={{ display: "flex", flexDirection: "row", gap:'20px', padding: '10px'}}>
                 <div
                     style={{
                         display: 'flex',

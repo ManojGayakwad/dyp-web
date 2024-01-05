@@ -1,9 +1,13 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery, createTheme, ThemeProvider } from '@mui/material';
 import Logo from "../assets/dyp2.png";
 import VideoBackground from '../assets/video.mp4';
 
 const Videobox = () => {
+    const theme = createTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const adjustMargin = isSmallScreen ? 0 : -60; 
+    const adjustWidth = isSmallScreen ? 100 : 110 ; 
     return (
         // Entire Screen with Video Background
         <>
@@ -11,7 +15,11 @@ const Videobox = () => {
                 sx={{
                     position: 'relative', // Set position to relative
                     overflow: 'hidden',
+                    minWidth:`${adjustWidth}%`,
                     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+                    // padding:"20px",
+                    background:"white",
+                    marginLeft: `${adjustMargin}px`
                 }}
             >
                 {/* Video Background */}
@@ -24,6 +32,7 @@ const Videobox = () => {
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        
                         zIndex: 1,
                     }}
                 >
@@ -42,6 +51,7 @@ const Videobox = () => {
                         padding: '20px',
                         textAlign: 'center',
                         color: 'white',
+                        // background:"white",
                         marginTop: '40px',
                         boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
                     }}
