@@ -75,7 +75,7 @@ const HomePage = () => {
 
     return (
         <div style={{ backgroundColor: '#002940', minHeight: '400vh', overflow: 'hidden' }}>
-            <AppBar position="fixed" style={{ backgroundColor: '#003a63', height: '100px', top: 0, zIndex: 1000 }}>
+              <AppBar position="fixed" style={{ backgroundColor: 'rgba(0, 58, 99, 0.2)', height: '100px', top: 0, zIndex: 1000, boxShadow:"none" }}>
                 <Toolbar style={{marginTop:"10px"}}>
                     {/* Left side with logo */}
                     <img src={Logo} alt="Logo" style={{
