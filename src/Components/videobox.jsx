@@ -6,56 +6,46 @@ import VideoBackground from '../assets/video.mp4';
 const Videobox = () => {
     const theme = createTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
-    const adjustMargin = isSmallScreen ? -20 : -100; 
-    const adjustWidth = isSmallScreen ? 110 : 120 ; 
+    const adjustMargin = isSmallScreen ? 2 : -60;
+    const adjustWidth = isSmallScreen ? 100 : 110;
     return (
         // Entire Screen with Video Background
         <>
-        <Box
-            sx={{
-                position: 'relative', // Set position to relative
-                overflow: 'hidden',
-                minWidth: `${adjustWidth}%`,
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
-                background: 'white',
-                marginLeft: `${adjustMargin}px`,
-                marginTop:"-100px"
-            }}
-        >
-            {/* Video Background */}
-            <video
-                autoPlay
-                muted
-                loop
-                style={{
-                    position: 'absolute', // Set position to absolute
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    zIndex: 1,
-                }}
-            >
-                {/* Add your video source here */}
-                <source src={VideoBackground} type="video/mp4" />
-            </video>
 
             {/* Main Content box  */}
+            <Box position="relative"  zIndex='1'>
+            <video
+                    autoPlay
+                    muted
+                    loop
+                    style={{
+                        position: 'absolute', // Set position to absolute
+                        width: '100%',
+                        height: '90vh',
+                        objectFit: 'cover',
+                       
+                    }}
+                >
+                    {/* Add your video source here */}
+                  
+                    <source src={VideoBackground} type="video/mp4" />
+                    
+                </video>  
             <Box
                 sx={{
                     position: 'relative', // Set position to relative
-                    zIndex: 2, // Set a higher z-index
-                    maxWidth: '100%',
-                    minHeight: '100vh',
-                    margin: 'auto',
+                    
+                  
                     padding: '20px',
                     textAlign: 'center',
                     color: 'white',
-                    marginTop:"90px",
+                   
                     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
                 }}
             >
+
                 {/* Logo centered in the box */}
-                <img src={Logo} alt="Logo" style={{ width: '30%', marginBottom: '20px' }} />
+                <img src={Logo} alt="Logo" style={{ width: '30%', marginBottom: '20px', marginTop:"95px", }} />
 
                 {/* Paragraph */}
                 <Typography variant="body1" style={{ fontFamily: "Arial", fontSize: "20px" }}>
@@ -75,8 +65,8 @@ const Videobox = () => {
                     </Button>
                 </Box>
             </Box>
-        </Box>
-    </>
+            </Box>
+        </>
     );
 };
 
