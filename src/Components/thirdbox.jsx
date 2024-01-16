@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, useMediaQuery, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Typography, useMediaQuery, createTheme, ThemeProvider, Card } from '@mui/material';
 
 const ThirdBox = () => {
     const theme = createTheme();
@@ -11,9 +11,9 @@ const ThirdBox = () => {
         <Box
             sx={{
                 boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Box shadow
-                minWidth: `${adjustedWidth}%`, // Maximum width of the box
-                minHeight: '60vh',
-                marginLeft: `${adjustedMargin}px`, // Center the box
+                // minWidth: `${adjustedWidth}%`, // Maximum width of the box
+                // minHeight: '60vh',
+                // marginLeft: `${adjustedMargin}px`, // Center the box
                 // padding: '10px', // Padding inside the box
                 textAlign: 'center', // Center text
                 marginTop: '20px', // Add some top margin
@@ -25,12 +25,12 @@ const ThirdBox = () => {
         >
             {/* Profile Card 1 */}
             <div style={{ display: "flex", flexDirection: "row", gap:'20px', padding: '10px'}}>
-                <div
+                <Card
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        border: "2px solid gray",
+                        // border: "2px solid gray",
                         background:"white"
                     }}
                 >
@@ -49,15 +49,15 @@ const ThirdBox = () => {
                     <Typography variant="body1">
                         Bio for John Doe goes here.
                     </Typography>
-                </div>
+                </Card>
 
                 {/* Profile Card 2 */}
-                <div
+                <Card
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        border: "2px solid gray",
+                        // border: "2px solid gray",
                         background:"white"
                     }}
                 >
@@ -75,15 +75,15 @@ const ThirdBox = () => {
                     <Typography variant="body1">
                         Bio for Jane Doe goes here.
                     </Typography>
-                </div>
+                </Card>
 
                 {/* Profile Card 3 */}
-                <div
+                <Card
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        border: "2px solid gray",
+                        // border: "2px solid gray",
                         background:"white"
                     }}
                 >
@@ -101,7 +101,7 @@ const ThirdBox = () => {
                     <Typography variant="body1">
                         Bio for Alex Smith goes here.
                     </Typography>
-                </div>
+                </Card>
             </div>
         </Box>
     );

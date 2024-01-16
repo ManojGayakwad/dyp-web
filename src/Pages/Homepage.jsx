@@ -24,6 +24,7 @@ import Logo from '../assets/logo23.png';
 import Videobox from '../Components/videobox';
 import Secondbox from '../Components/secondbox';
 import Thirdbox from '../Components/thirdbox';
+import Fourthbox from '../Components/fourthbox.jsx';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Collapse from '@mui/material/Collapse';
@@ -77,11 +78,11 @@ const HomePage = () => {
     return (
         // <div style={{ backgroundColor: '#002940',  position:"relative", }}>
         <>
-            <Box position="relative" backgroundColor="#002940">
+            <Box position="fixed" backgroundColor="#002940"  height="100%" overflow="auto">
            
                 <Videobox />
                 
-                <AppBar position="fixed" style={{ backgroundColor: 'rgba(0, 58, 99, 0.2)', minHeight: '500vh', width: "100%", top: 0, zIndex: 1000, boxShadow: "none" }}>
+                <AppBar position="fixed"  style={{ backgroundColor: 'rgba(0, 58, 99, 0.1)',   top: 0, zIndex: 1000, boxShadow: "none" }}>
                     <Toolbar style={{ marginTop: "10px" }}>
                         {/* Left side with logo */}
                         <img src={Logo} alt="Logo" style={{
@@ -170,7 +171,7 @@ const HomePage = () => {
                     BackdropProps={{ invisible: true }}
                     PaperComponent={Paper}
                     PaperProps={{
-                        sx: { width: drawerWidth, top: '100px', position: 'fixed', backgroundColor: 'rgba(0, 0, 0, 0.0)', color: "white", overflowY: 'auto' },
+                        sx: { width: drawerWidth, top: '90px', position: 'fixed', backgroundColor: 'rgba(0, 0, 0, 0.0)', color: "white", overflowY: 'auto' },
                     }}
                     ModalProps={{
                         style: { position: 'absolute', top: '100px', left: 0, right: 0, bottom: 0, overflowY: 'auto' },
@@ -196,8 +197,8 @@ const HomePage = () => {
                             <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Admission</Typography>} />
                         </ListItem>
                         <div style={{ display: "flex", flexDirection: "row", borderBottom: "1px solid black" }}>
-                            <ListItem button component="a" href="#" onClick={handleAcademicsToggle} sx={{ '&:hover': { backgroundColor: 'red' } }}>
-                                <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Academics</Typography>} />
+                            <ListItem button component="a" href="/facultyList" onClick={handleAcademicsToggle} sx={{ '&:hover': { backgroundColor: 'red' } }}>
+                                <ListItemText primary={<Typography fontSize={35} fontWeight="bold">Faculty</Typography>} />
                             </ListItem>
                             <Box sx={{ borderLeft: "1px solid black", '&:hover': { backgroundColor: '#edc054' } }}>
                                 <IconButton edge="end" color="inherit" aria-label="dropdown" onClick={handleAcademicsToggle} style={{ margin: "20px" }}>
@@ -291,12 +292,15 @@ const HomePage = () => {
 
                     </List>
                 </Drawer>
-
+                
+                <Secondbox  />
+                <Thirdbox />
+                <Fourthbox />
                 {/* Your main content goes here */}
                 <Container style={{ marginTop: '100px' }}>
+                
+                
                    
-                    <Secondbox style={{ marginTop: '20px' }} />
-                    <Thirdbox style={{ marginTop: '20px' }} />
                 </Container>
             </Box>
         </>

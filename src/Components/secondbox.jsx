@@ -6,34 +6,34 @@ const SecondBox = () => {
     const theme = createTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const adjustedFontSize = isSmallScreen ? 20 : 40; 
-    const adjustedWidth = isSmallScreen ? 100 : 110;
-    const adjustedMargin = isSmallScreen ? 0 : -60; 
+    
 
     return (
-        <ThemeProvider theme={theme}>
+        // <ThemeProvider theme={theme}>
             <Box
                 sx={{
-                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Box shadow
-                    minWidth: `${adjustedWidth}%`, // Maximum width of the box
-                    minHeight: '60vh',
-                    marginLeft: `${adjustedMargin}px`, // Center the box
-                    // padding: '10px', // Padding inside the box
-                    textAlign: 'center', // Center text
-                    marginTop: '20px', // Add some top margin
+                    // boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Box shadow
+                    width: '100%',
+                    // height: 'auto',
+                   
+                    // marginLeft: `${adjustedMargin}px`, // Center the box
+                  // Padding inside the box
+                    // textAlign: 'center', // Center text
+                    // marginTop: '130px', // Add some top margin
                     backgroundImage: `url(${Logo})`, // Set background image
                     backgroundSize: 'cover', // Cover the entire box with the background image
                     backgroundRepeat: 'no-repeat', // Do not repeat the background image
                     position: 'relative', // Set position to relative for absolute positioning of the line
                 }}
             >
-                <div style={{ margin: '30px', display: "flex", flexDirection: "initial",  position: 'relative', gap: "10px" }}>
+                {/* <div style={{ margin: '30px', display: "flex", flexDirection: "initial",  position: 'relative', gap: "10px" }}> */}
                     {/* Vertical solid line */}
                     <div
                         style={{
                             position: 'absolute',
-                            left: 0,
+                            left: 10,
                             top: 15,
-                            minHeight: '100%',
+                            minHeight: '90%',
                             width: '3px',
                             borderRadius: "2px",
                             background: 'red',
@@ -52,9 +52,9 @@ const SecondBox = () => {
                             Represents 53 states and territories, and 53 nations.
                         </p>
                     </div>
-                </div>
+                {/* </div> */}
             </Box>
-        </ThemeProvider>
+        // </ThemeProvider>
     );
 };
 
