@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+  font-family: 'Rubik', sans-serif;
+} */
+
+
+section {
+  padding: 20px;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.team-card {
+  color: #333;
+  background-color: #ffffff;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 40em;
+  border-radius: 10px;
+}
+
+.team-card__content {
+  display: grid;
+  padding: 16px;
+  text-align: center;
+}
+
+.team-card__img-box {
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.team-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.team-card__intro {
+  display: grid;
+  gap: 8px;
+}
+
+.team-card__title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.team-card__desc {
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .team-card {
+    max-width: 100%;
+  }
+
+  .team-card__img-box {
+    max-width: 100%;
+  }
+}
+
+.accordion-title {
+  color: #292b2c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  overflow-wrap: break-word;
+}
+
+.accordion-title {
+  transition: color 0.3s ease; 
+}
+
+.accordion-title:hover {
+  color: #c38700;
+}
+
+
+.header-container {
+  width: 100%;
+  height: 100%;
+}
+
+.header-container:hover {
+  color: #c38700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faculty-profile {
+  color: #333;
+  background-color: #ffffff;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 40em;
+  border-radius: 10px;
+}
+
+.faculty-profile__content {
+  display: grid;
+  padding: 16px;
+  text-align: left; 
+}
+
+.faculty-profile__img-box {
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.faculty-profile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.faculty-profile__intro {
+  display: grid;
+  gap: 8px;
+}
+
+.faculty-profile__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.faculty-profile__desc {
+  line-height: 1;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .col-lg-4,
+  .col-lg-8 {
+    width: 100%;
+  }
+}
+
+/* Media Query for Tablet Devices */
+@media screen and (max-width: 991px) {
+  .faculty-profile {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  .faculty-profile__img-box {
+    aspect-ratio: unset;
+  }
+
+  .faculty-profile__img {
+    border-radius: 10px;
+  }
+
+  .faculty-profile__content {
+    padding: 10px;
+  }
+
+  .faculty-profile__title {
+    font-size: 24px;
+  }
+
+  .faculty-profile__desc {
+    font-size: 24px;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  .faculty-profile {
+    max-width: 100%;
+  }
+
+  .faculty-profile__img-box {
+    max-width: 100%;
+  }
+
+  .faculty-profile__content {
+    padding: 10px;
+  }
+
+  .faculty-profile__title {
+    font-size: 16px;
+  }
+
+  .faculty-profile__desc {
+    font-size: 16px;
+  }
+}
+
+
+/* Add this to your CSS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInAnimation {
+  animation: fadeIn 1s ease-in-out; 
 }
