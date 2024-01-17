@@ -82,7 +82,7 @@ const HomePage = () => {
            
                 <Videobox />
                 
-                <AppBar position="fixed"  style={{ backgroundColor: 'rgba(0, 58, 99, 0.1)',   top: 0, zIndex: 1000, boxShadow: "none" }}>
+                <AppBar position="fixed"  style={{ backgroundColor: 'rgba(0, 58, 99, 0.1)',   top: 0,  zIndex: 1000, boxShadow: "none" }}>
                     <Toolbar style={{ marginTop: "10px" }}>
                         {/* Left side with logo */}
                         <img src={Logo} alt="Logo" style={{
@@ -297,11 +297,7 @@ const HomePage = () => {
                 <Thirdbox />
                 <Fourthbox />
                 {/* Your main content goes here */}
-                <Container style={{ marginTop: '100px' }}>
-                
-                
-                   
-                </Container>
+               
             </Box>
         </>
     );
